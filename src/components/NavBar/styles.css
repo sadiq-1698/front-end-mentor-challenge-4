@@ -1,0 +1,49 @@
+@media screen and (min-width : 320px) {
+    .navbar {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--white);
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+        font-size : 14px;
+    }
+
+    .navbar.dark{
+        background-color: var(--very-dark-blue-dark-mode-background);
+        color : var(--white);
+    }
+
+    .navbar .left {
+        margin-left: 1rem;
+    }
+
+    .navbar .right {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    .navbar .left span{
+        font-weight : bold;
+        cursor: pointer;
+    }
+
+    .navbar .right span{
+        font-weight : 600;
+        cursor: pointer;
+    }
+
+    .navbar .right .fa.fa-moon-o{
+        color: black;
+        margin: 0;
+        padding : 0;
+        margin-right : 0.3rem;
+        position: relative;
+        top : 2px;
+    }
+
+    .navbar .right .fa.fa-moon-o.dark{
+        color : var(--white);
+    }
+
+}

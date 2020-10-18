@@ -1,0 +1,9 @@
+@media screen and (min-width : 320px) {
+    .filter-dropdown {
+        margin: 0;
+        padding: 0;
+        background-color: purple;
+        flex : 1;
+    }
+
+}
