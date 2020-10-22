@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './styles.css';
+import ThemeToggle from '../../context/ThemeToggle';
 
 const Navbar = () => {
 
-    const [darkMode, setDarkMode] = useState(false);
+    const { darkMode, setDarkMode } = useContext(ThemeToggle);
 
     return (
         <nav className={ darkMode ? "navbar dark" : "navbar" }>

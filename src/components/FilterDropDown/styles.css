@@ -2,8 +2,47 @@
     .filter-dropdown {
         margin: 0;
         padding: 0;
-        background-color: purple;
-        flex : 1;
+        flex: 1;
     }
+
+    .filter-dropdown .content-container {
+        background-color: var(--white);
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 55px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    .filter-dropdown .content-container span {
+        line-height: 55px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .filter-dropdown .content-container .dropdown-icon-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-dropdown .content-container .dropdown-icon-container i {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .filter-dropdown .content-container.dark {
+        background-color: var(--dark-blue);
+    }
+
+    .filter-dropdown .content-container span.dark {
+        color: var(--white);
+    }
+
+    .filter-dropdown .content-container .dropdown-icon-container i.dark {
+        color: var(--white);
+    }
+
 
 }

@@ -10,7 +10,7 @@
     }
 
     .navbar.dark{
-        background-color: var(--very-dark-blue-dark-mode-background);
+        background-color: var(--dark-blue);
         color : var(--white);
     }
 
