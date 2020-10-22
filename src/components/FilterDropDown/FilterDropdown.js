@@ -19,7 +19,7 @@ const FilterDropdown = () => {
         <>
             <div className="filter-dropdown" >
                 <div className={darkMode ? "content-container dark" : "content-container"} onClick={onClickDropDown}>
-                    <span className={darkMode ? "dark" : null}>
+                    <span className={ darkMode ? "dark" : null }>
                         Filter by Region
                     </span>
                     <div className="dropdown-icon-container">

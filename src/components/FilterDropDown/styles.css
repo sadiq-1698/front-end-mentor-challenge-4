@@ -73,7 +73,7 @@
         padding-bottom: 0.2rem;
         padding-top: 0.2rem;
         margin-bottom: 0.1rem;
-        font-weight: bold;
+        font-weight: 600;
     }
 
     .dropdown-container ul li:last-child {
