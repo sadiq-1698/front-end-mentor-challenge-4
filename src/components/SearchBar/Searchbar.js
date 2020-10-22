@@ -1,10 +1,12 @@
 import React, {useContext} from 'react';
 import './styles.css';
 import ThemeToggle from '../../context/ThemeToggle';
+import Countries from '../../context/Countries';
 
 const Searchbar = () => {
 
     const { darkMode } = useContext(ThemeToggle);
+    const { countryList, displayList, setDisplayList } = useContext(Countries);
 
     return (
         <div className="search-bar">
@@ -14,8 +16,16 @@ const Searchbar = () => {
                 </div>
                 <input 
                     className={ darkMode ? "dark" : null} 
-                    placeholder="Search for a country...">
-                </input>
+                    placeholder="Search for a country..."
+                    onChange={(event) => {
+                        console.log(displayList);
+                        let tempArray = countryList.filter(function(country) {
+                            let countryName = country.name;
+                            return countryName.includes(event.target.value.trim());
+                        });
+                        setDisplayList(tempArray);
+                    }}
+                />
             </div>
         </div>
     )
