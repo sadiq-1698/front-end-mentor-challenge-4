@@ -58,6 +58,7 @@
         top: 60px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
         border-radius: 5px;
+        z-index : 10;
     }
 
     .dropdown-container ul {
@@ -80,8 +81,7 @@
     }
 
     .dropdown-container ul li:hover {
-        background-color: var(--dark-gray-light-mode-input);
-        transform : scaleY(1.2);
+        background-color: lightgray;
     }
 
     .dropdown-container ul li:last-child {
@@ -95,6 +95,10 @@
     .dropdown-container.display.dark {
         background-color: var(--dark-blue);
     }
+}
 
-
+@media screen and (min-width : 650px){
+    .filter-dropdown .content-container {
+        width : 200px;
+    }
 }

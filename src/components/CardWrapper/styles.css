@@ -12,3 +12,13 @@
         background-color: var(--very-dark-blue-dark-mode-background);
     }
 }
+
+@media screen and (min-width : 650px) {
+
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+}

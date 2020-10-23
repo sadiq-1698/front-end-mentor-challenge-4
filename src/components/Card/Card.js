@@ -9,7 +9,8 @@ const Card = (props) => {
         maxWidth : "100%",
         maxHeight : "100%",
         borderTopLeftRadius : "5px",
-        borderTopRightRadius : "5px"
+        borderTopRightRadius : "5px",
+        objectFit : "fill",
     }
 
     // use context
@@ -33,9 +34,9 @@ const Card = (props) => {
             <div className="country-details">
                 <h1 className={darkMode ? "dark" : null} >{props.name}</h1>
                 <div className="more-details">
-                    <h4 className={darkMode ? "dark" : null}>Population:<span>&nbsp;{numberWithCommas(props.population)}</span></h4>
-                    <h4 className={darkMode ? "dark" : null}>Region:<span>&nbsp;{props.region}</span></h4>
-                    <h4 className={darkMode ? "dark" : null}>Capital:<span>&nbsp;{props.capital}</span></h4>
+                    <h4 className={ darkMode ? "dark" : null }>Population:<span>&nbsp;{numberWithCommas(props.population)}</span></h4>
+                    <h4 className={ darkMode ? "dark" : null }>Region:<span>&nbsp;{props.region}</span></h4>
+                    <h4 className={ darkMode ? "dark" : null }>Capital:<span>&nbsp;{props.capital}</span></h4>
                 </div>
             </div>
         </div>

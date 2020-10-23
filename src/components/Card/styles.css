@@ -11,6 +11,7 @@
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
         cursor: pointer;
         transition: all .2s ease-in-out;
+        z-index: 2;
     }
 
     .country-card:hover{
@@ -44,6 +45,15 @@
     }
     .country-card .country-details .more-details h4.dark{
         color : var(--white);
+    }
+
+}
+
+@media screen and (min-width : 650px) {
+
+    .country-card {
+        width: 40%;
+        height: 415px;
     }
 
 }

@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className={ darkMode ? "navbar dark" : "navbar" }>
             <div className="left">
-                <span>Where in the world?</span>
+                <span >Where in the world?</span>
             </div>
             <div className="right" onClick={toggleDarkMode}>
                 <i className={ darkMode ? "fa fa-moon-o dark" : "fa fa-moon-o" } aria-hidden="true"></i>
@@ -23,5 +23,15 @@ const Navbar = () => {
     }
 
 }
+
+// const RandomElement = () => {
+//     return (
+//         <div styles={{display : "none"}}>
+//             <h1>Random element here</h1>
+//         </div>
+//     );
+// }
+
+
 
 export default Navbar;

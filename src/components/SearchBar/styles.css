@@ -73,3 +73,12 @@
     }
 
 }
+
+@media screen and (min-width : 650px){
+    .search-bar{
+        justify-content: flex-start;
+    }
+    .search-bar .search-bar-content {
+        width: 450px;
+    }
+}
