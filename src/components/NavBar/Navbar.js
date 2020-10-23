@@ -24,14 +24,5 @@ const Navbar = () => {
 
 }
 
-// const RandomElement = () => {
-//     return (
-//         <div styles={{display : "none"}}>
-//             <h1>Random element here</h1>
-//         </div>
-//     );
-// }
-
-
 
 export default Navbar;

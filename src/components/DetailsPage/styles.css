@@ -1,0 +1,78 @@
+@media screen and (min-width: 320px) {
+    .details-page {
+        width: calc(100% - 2rem);
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding-bottom : 4rem;
+    }
+    .details-page .back-btn {
+        background-color: var(--white);
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 1.5rem;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 2px;
+        margin-bottom : 3rem;
+    }
+    .details-page .back-btn.dark {
+        background-color: var(--dark-blue);
+        color : var(--white);
+    }
+    .details-page .back-btn:hover {
+        transform : scale(0.98);
+    }
+    .details-page .back-btn span {
+        padding-left: 0.5rem;
+    }
+    .details-page .back-btn i.dark {
+        color : var(--white);
+    }
+    /* dsjoagliiiiiiiiuiuiyoiiiiiiiiiiiiulgiygiug */
+
+    .details-container.dark{
+        color : var(--white);
+    }
+    .details-container span{
+        font-weight : 400;
+    }
+
+    .details-container img{
+        max-width : 100%;
+        max-height : 220px;
+        margin-bottom: 2rem;
+    }
+    .details-container .right-section .first {
+        margin-bottom : 2.5rem;
+    }
+    .details-container .right-section .first h1{
+        margin-bottom : 1rem;
+    }
+    .details-container .right-section .second {
+        margin-bottom : 2.5rem;
+    }
+    .details-container .right-section .third {
+        display: flex;
+        flex-direction: column;
+    }
+    .details-container .right-section .third h4{
+        margin-bottom : 0.7rem;
+    }
+    .details-container .right-section .third .third-right span{
+        margin-left : 0.5rem;
+        background-color: var(--white);
+        padding : 0.5rem 1.5rem;
+        margin-top: 5rem;
+        border-radius: 3px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .details-container.dark .right-section .third .third-right span{
+        background-color: var(--dark-blue);
+    }
+    .details-container .right-section .third .third-right span:first-child{
+        margin-left : 0;
+    }
+}

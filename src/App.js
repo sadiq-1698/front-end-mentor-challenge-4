@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Navbar from './components/NavBar/Navbar';
-import SearchWrapper from './components/SearchWrapper/SearchWrapper';
+// import MainPage from './components/MainPage/MainPage';
+import DetailsPage from './components/DetailsPage/DetailsPage';
 import ThemeToggle from './context/ThemeToggle';
-import CardWrapper from './components/CardWrapper/CardWrapper';
 import Countries from './context/Countries';
 
 function App() {
@@ -29,12 +29,13 @@ function App() {
       <ThemeToggle.Provider value={{ darkMode, setDarkMode }}>
         <Navbar />
         <Countries.Provider value={{countryList, displayList, setDisplayList}}>
-          <SearchWrapper />
-          <CardWrapper />
+          {/* <MainPage /> */}
+          <DetailsPage />
         </Countries.Provider>
       </ThemeToggle.Provider>
     </div>
   );
 };
+
 
 export default App;
