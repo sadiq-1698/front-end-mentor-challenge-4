@@ -82,3 +82,11 @@
         width: 450px;
     }
 }
+
+@media screen and (min-width : 900px) {
+
+    .search-bar .search-bar-content {
+        width: 380px;
+    }
+  
+}

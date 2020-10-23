@@ -102,3 +102,20 @@
         width : 200px;
     }
 }
+
+@media screen and (min-width : 800px){
+
+    .filter-dropdown {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+}
+
+@media screen and (min-width : 900px) {
+
+    .filter-dropdown .content-container {
+        width : 150px;
+    }
+  
+}

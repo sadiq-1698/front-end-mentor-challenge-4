@@ -57,3 +57,31 @@
     }
 
 }
+
+@media screen and (min-width : 800px) {
+
+    .country-card {
+        width : 230px;
+        height: 350px;
+    }
+
+}
+
+@media screen and (min-width : 900px) {
+
+    .country-card {
+        flex : 1;
+        min-width : 230px;
+        max-width : 230px;
+    }
+
+}
+
+@media screen and (min-width : 1070px) {
+
+    .country-card {
+        float: left;
+        align-self: left;
+    }
+
+}
