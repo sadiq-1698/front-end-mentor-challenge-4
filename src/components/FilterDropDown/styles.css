@@ -15,6 +15,7 @@
         height: 55px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
         border-radius: 5px;
+        cursor: pointer;
     }
 
     .filter-dropdown .content-container span {
@@ -74,6 +75,13 @@
         padding-top: 0.2rem;
         margin-bottom: 0.1rem;
         font-weight: 600;
+        transition: 0.1s all ease-in;
+        cursor: pointer;
+    }
+
+    .dropdown-container ul li:hover {
+        background-color: var(--dark-gray-light-mode-input);
+        transform : scaleY(1.2);
     }
 
     .dropdown-container ul li:last-child {

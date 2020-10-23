@@ -9,6 +9,12 @@
         display: flex;
         flex-direction: column;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+
+    .country-card:hover{
+        transform: scale(1.01);
     }
 
     .country-card.dark {

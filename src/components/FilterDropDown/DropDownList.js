@@ -13,6 +13,10 @@ const DropDownList = () => {
 
     //helper functions
     const chooseRegion = (regionName) => {
+        if(regionName === "All"){
+            setDisplayList(countryList);
+            return;
+        }
         let tempArray = countryList.filter(function(country) {
             let currentCountryRegion = country.region;
             return currentCountryRegion === regionName;
@@ -23,6 +27,7 @@ const DropDownList = () => {
     return (
         <div className={ dropDownOpen ? darkMode ? "dropdown-container display dark" : "dropdown-container display" : "dropdown-container"}>
             <ul className={darkMode ? "dark" : null}>
+                <li onClick={(e)=> chooseRegion(e.target.innerHTML)}>All</li>
                 <li onClick={(e)=> chooseRegion(e.target.innerHTML)}>Africa</li>
                 <li onClick={(e)=> chooseRegion(e.target.innerHTML)}>Americas</li>
                 <li onClick={(e)=> chooseRegion(e.target.innerHTML)}>Asia</li>
