@@ -50,15 +50,21 @@
     .details-container .right-section .first h1{
         margin-bottom : 1rem;
     }
+    .details-container .right-section .first h4{
+        margin-bottom : 0.5rem;
+    }
     .details-container .right-section .second {
         margin-bottom : 2.5rem;
+    }
+    .details-container .right-section .second h4{
+        margin-bottom : 0.5rem;
     }
     .details-container .right-section .third {
         display: flex;
         flex-direction: column;
     }
     .details-container .right-section .third h4{
-        margin-bottom : 0.7rem;
+        margin-bottom : 1.8rem;
     }
     .details-container .right-section .third .third-right span{
         margin-left : 0.5rem;
@@ -67,6 +73,7 @@
         margin-top: 5rem;
         border-radius: 3px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
     }
 
     .details-container.dark .right-section .third .third-right span{
@@ -75,4 +82,61 @@
     .details-container .right-section .third .third-right span:first-child{
         margin-left : 0;
     }
+}
+
+@media screen and (min-width: 650px) {
+    .details-container img{
+        max-width : 450px;
+        max-height : 220px;
+    }
+}
+
+@media screen and (min-width : 900px) {
+
+    .details-page {
+        width: calc(100% - 6rem);
+    }
+
+    .details-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+     .image-container {
+        width: 400px;
+        height: 350px;
+        background: #444;
+        border: solid black 1px;
+        background-size: 100% 100%;
+    }
+
+    .right-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .right-section .top{
+        display: flex;
+    }
+
+    .right-section .top .second{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .right-section .top .first{
+        margin-bottom: 0;
+        margin-right : 1rem;
+    }
+
+    .right-section .third{
+        display: flex;
+        flex-direction: row!important;
+
+    }
+
+
 }
