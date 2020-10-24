@@ -6,19 +6,21 @@ const DetailsPage = () => {
 
     const { darkMode } = useContext(ThemeToggle);
 
-    const Background = "https://restcountries.eu/data/afg.svg"
+    const Background = "https://restcountries.eu/data/afg.svg";
 
     return (
         <div className="details-page">
+
             <div className={darkMode ? "back-btn dark" : "back-btn"}>
                 <i className={darkMode ? "fa fa-arrow-left dark" : "fa fa-arrow-left"} aria-hidden="true"></i>
                 <span>Back</span>
             </div>
-            {/* bbbbbbbbbbbbbbbbbbbbbooooooooooooooooooooooooommmmmmmmmmmmmmmmm */}
+
+
             <div className={darkMode ? "details-container dark" : "details-container"}>
                 <div className="image-container" style={{backgroundImage: `url(${Background})`}}>
-                    {/* <img src="https://restcountries.eu/data/afg.svg" alt="flag"/> */}
                 </div>
+                <div className="only-desktop"></div>
                 <div className="right-section">
                     <div className="top">
                         <div className="first">

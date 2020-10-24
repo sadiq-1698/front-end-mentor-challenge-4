@@ -1,4 +1,7 @@
 @media screen and (min-width: 320px) {
+    .details-container .only-desktop{
+        display: none;
+    }
     .details-page {
         width: calc(100% - 2rem);
         margin: 0 auto;
@@ -82,17 +85,23 @@
     .details-container .right-section .third .third-right span:first-child{
         margin-left : 0;
     }
+    .image-container {
+        width: 100%;
+        height: 250px;
+        background: #444;
+        background-size: 100% 100%;
+        margin-bottom : 3rem;
+    }
 }
 
 @media screen and (min-width: 650px) {
-    .details-container img{
+    .image-container {
         max-width : 450px;
-        max-height : 220px;
+        height : 300px;
     }
 }
 
 @media screen and (min-width : 900px) {
-
     .details-page {
         width: calc(100% - 6rem);
     }
@@ -102,22 +111,33 @@
         justify-content: space-between;
     }
 
+    .details-container .only-desktop{
+        display: block;
+        width: 12%;
+    }
+
      .image-container {
-        width: 400px;
-        height: 350px;
+        width: 40%;
+        height: 360px;
         background: #444;
-        border: solid black 1px;
         background-size: 100% 100%;
     }
 
     .right-section{
+        width : 48%;
+        height: 360px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;    
+        margin-left : 5rem;
+        margin: 0 auto;
     }
 
     .right-section .top{
         display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .right-section .top .second{
@@ -135,7 +155,34 @@
     .right-section .third{
         display: flex;
         flex-direction: row!important;
+        width: 100%;
+    }
 
+    .details-container .right-section .third h4{
+        margin-bottom: 0;
+    }
+
+    .details-container .right-section .third .third-right span{
+        padding : 0.2rem 1.5rem;
+    }
+
+}
+
+
+@media screen and (min-width : 950px) {
+
+    .image-container {
+        width: 43%;
+        height: 360px;
+    }
+
+    .details-container .only-desktop{
+        width: 14%;
+    }
+
+    .right-section{
+        width : 43%;
+        height: 360px;
     }
 
 
