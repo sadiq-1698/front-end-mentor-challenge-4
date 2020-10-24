@@ -19,8 +19,8 @@ const Searchbar = () => {
                     placeholder="Search for a country..."
                     onChange={(event) => {
                         let tempArray = countryList.filter(function(country) {
-                            let countryName = country.name;
-                            return countryName.includes(event.target.value.trim());
+                            let countryName = country.name.toLowerCase();
+                            return countryName.includes(event.target.value.trim().toLowerCase());
                         });
                         setDisplayList(tempArray);
                     }}

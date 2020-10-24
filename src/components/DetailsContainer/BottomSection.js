@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Countries from '../../context/Countries';
 
 const BottomSection = (props) => {
 
     const countryDetails = props.countryDetails;
 
-    console.log(countryDetails);
+    // use context
+    const { setCurrentCountry, countryList } = useContext(Countries);
+
+    // helper functions
+    function onClickBorderCountries(countryName){
+        let findCountry = countryList.filter(function(country) {
+            let currentCountryRegion = country.alpha3Code;
+            return currentCountryRegion === countryName;
+        });
+        setCurrentCountry(findCountry[0]);
+    }
 
     return (
         <div className="third">
@@ -12,7 +23,9 @@ const BottomSection = (props) => {
             <div className="third-right">
                 {
                     countryDetails.borders.map((country, index) => {
-                        return <span key={index}>{country}</span>
+                        return  <span key={index} onClick={(e) => onClickBorderCountries(e.target.innerHTML)}>
+                                    {country}
+                                </span>
                     })
                 }     
             </div>

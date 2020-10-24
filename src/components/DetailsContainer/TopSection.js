@@ -4,13 +4,18 @@ const TopSection = (props) => {
 
     const countryDetails = props.countryDetails;
 
+    // helper functions
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
     return (
         <div className="top">
             <div className="first">
                 <h1>Country</h1>
                 <div className="more-details">
                     <h4 >Native Name:<span>&nbsp;{countryDetails.nativeName}</span></h4>
-                    <h4 >Population:<span>&nbsp;{countryDetails.population}</span></h4>
+                    <h4 >Population:<span>&nbsp;{numberWithCommas(countryDetails.population)}</span></h4>
                     <h4 >Region:<span>&nbsp;{countryDetails.region}</span></h4>
                     <h4 >Sub Region:<span>&nbsp;{countryDetails.subregion}</span></h4>
                     <h4 >Capital:<span>&nbsp;{countryDetails.capital}</span></h4>
@@ -24,8 +29,6 @@ const TopSection = (props) => {
         </div>   
     );
 }
-
-
 
 const TopLevelDomain = (props) => {
 
@@ -51,9 +54,9 @@ const Currencies = (props) => {
     return (
         <h4>Currencies:&nbsp;
             {
-                countryDetails.currenices.map((currency, index) => {
+                countryDetails.currencies.map((currency, index) => {
                     return <span key={index}>
-                        {currency.name} {index < countryDetails.currenices.length - 1 ? ", " : ""}
+                        {currency.name} {index < countryDetails.currencies.length - 1 ? ", " : ""}
                     </span>
                 })
             }
