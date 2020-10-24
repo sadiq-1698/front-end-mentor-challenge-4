@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './styles.css';
 import ThemeToggle from '../../context/ThemeToggle';
+import SwitchPage from '../../context/SwitchPage';
 
 const Card = (props) => {
 
@@ -15,15 +16,20 @@ const Card = (props) => {
 
     // use context
     const { darkMode } = useContext(ThemeToggle);
+    const { setShowDetailsPage } = useContext(SwitchPage);
 
     // helper functions
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
+    function showDetailsPage(){
+        setShowDetailsPage(true);
+    }
+
     // component
     return (
-        <div className={darkMode ? "country-card dark" : "country-card"}>
+        <div className={darkMode ? "country-card dark" : "country-card"} onClick={showDetailsPage} >
             <div className="image-container">
                 <img 
                     src={props.flag} 
