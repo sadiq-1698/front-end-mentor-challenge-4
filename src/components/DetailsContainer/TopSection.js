@@ -12,7 +12,7 @@ const TopSection = (props) => {
     return (
         <div className="top">
             <div className="first">
-                <h1>Country</h1>
+                <h1>{countryDetails.name}</h1>
                 <div className="more-details">
                     <h4 >Native Name:<span>&nbsp;{countryDetails.nativeName}</span></h4>
                     <h4 >Population:<span>&nbsp;{numberWithCommas(countryDetails.population)}</span></h4>

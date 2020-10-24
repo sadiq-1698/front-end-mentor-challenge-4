@@ -7,13 +7,12 @@ import Countries from '../../context/Countries';
 const Card = ({country}) => {
 
     // card styles
-    const imageStyles = {
-        maxWidth : "100%",
-        maxHeight : "100%",
-        borderTopLeftRadius : "5px",
-        borderTopRightRadius : "5px",
-        objectFit : "fill",
-    }
+    // const imageStyles = {
+    //     maxWidth : "100%",
+    //     maxHeight : "100%",
+    //     borderTopLeftRadius : "5px",
+    //     borderTopRightRadius : "5px",
+    // }
 
     // use context
     const { darkMode } = useContext(ThemeToggle);
@@ -33,12 +32,9 @@ const Card = ({country}) => {
     // component
     return (
         <div className={darkMode ? "country-card dark" : "country-card"} onClick={showDetailsPage} >
-            <div className="image-container">
-                <img 
-                    src={country.flag} 
-                    alt="country" 
-                    style={imageStyles}
-                />
+            <div 
+                className="image-container" 
+                style={{backgroundImage: `url(${country.flag})`}}>
             </div>
             <div className="country-details">
                 <h1 className={darkMode ? "dark" : null} >{country.name}</h1>
