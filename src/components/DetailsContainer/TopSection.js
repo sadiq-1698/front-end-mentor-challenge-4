@@ -17,28 +17,64 @@ const TopSection = (props) => {
                 </div>
             </div>
             <div className="second">
-                <h4>Top Level Domain:&nbsp;
-                        {
-                            countryDetails.topLevelDomain.map((domain, index) => {
-                                return <span key={index}>{domain}</span>
-                            })
-                        }
-                </h4>
-                <h4>Currencies:
-                    <span>&nbsp;{countryDetails.currencies[0].name}</span>
-                </h4>
-                <h4>Languages:&nbsp;
-                        {
-                            countryDetails.languages.map((language, index) => {
-                                 return <span key={index}>
-                                            {language.name}
-                                            {index < countryDetails.languages.length - 1 ? ", " : ""}
-                                        </span>
-                            })
-                        }
-                </h4>
+                <TopLevelDomain countryDetails = {countryDetails}/>
+                <Currencies countryDetails = {countryDetails}/>
+                <Languages countryDetails = {countryDetails}/>
             </div>
         </div>   
+    );
+}
+
+
+
+const TopLevelDomain = (props) => {
+
+    const countryDetails = props.countryDetails;
+
+    return (
+        <h4>Top Level Domain:&nbsp;
+            {
+                countryDetails.topLevelDomain.map((domain, index) => {
+                    return <span key={index}>
+                     {domain} {index < countryDetails.topLevelDomain.length - 1 ? ", " : ""}
+                    </span>
+                })
+            }
+        </h4>
+    );
+}
+
+const Currencies = (props) => {
+
+    const countryDetails = props.countryDetails;
+
+    return (
+        <h4>Currencies:&nbsp;
+            {
+                countryDetails.currenices.map((currency, index) => {
+                    return <span key={index}>
+                        {currency.name} {index < countryDetails.currenices.length - 1 ? ", " : ""}
+                    </span>
+                })
+            }
+        </h4>
+    );
+}
+
+const Languages = (props) => {
+
+    const countryDetails = props.countryDetails;
+
+    return (
+        <h4>Languages:&nbsp;
+            {
+                countryDetails.languages.map((language, index) => {
+                    return <span key={index}>
+                        {language.name} {index < countryDetails.languages.length - 1 ? ", " : ""}
+                    </span>
+                })
+            }
+        </h4>
     );
 }
 
