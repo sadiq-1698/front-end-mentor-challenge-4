@@ -5,11 +5,13 @@ import TopSection from './TopSection';
 import BottomSection from './BottomSection';
 
 
-const DetailsContainer = () => {
+const DetailsContainer = (props) => {
 
     const { darkMode } = useContext(ThemeToggle);
 
-    const Background = "https://restcountries.eu/data/afg.svg";
+    const countryDetails = props.countryDetails;
+
+    const Background = countryDetails.flag;
 
     return (
         <div className={darkMode ? "details-container dark" : "details-container"}>
@@ -22,8 +24,12 @@ const DetailsContainer = () => {
                 <div className="only-desktop"></div>
 
                 <div className="right-section">
-                    <TopSection />
-                    <BottomSection />
+                    <TopSection 
+                        countryDetails = {countryDetails}
+                    />
+                    <BottomSection 
+                        countryDetails = {countryDetails}
+                    />
                 </div>
             </div>
     );

@@ -14,6 +14,12 @@ function App() {
   const[countryList, setCountryList] = useState(null);
   const[displayList, setDisplayList] = useState(null);
   const[showDetailsPage, setShowDetailsPage] = useState(false);
+  const[currentCountry, setCurrentCountry] = useState(null);
+
+  // country provider values
+  const countryProviderValue = {
+    countryList, displayList, setDisplayList, currentCountry, setCurrentCountry
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +37,7 @@ function App() {
       <ThemeToggle.Provider value={{ darkMode, setDarkMode }}>
         <Navbar />
         <SwitchPage.Provider value ={{ showDetailsPage, setShowDetailsPage }}>
-          <Countries.Provider value={{countryList, displayList, setDisplayList}}>
+          <Countries.Provider value={ countryProviderValue }>
             {
               showDetailsPage ? <DetailsPage /> : <MainPage />
             }

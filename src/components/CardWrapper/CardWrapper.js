@@ -20,11 +20,7 @@ const CardWrapper = () => {
                 displayList.map((country, index) => {
                     return <Card 
                                 key={index}
-                                name={country.name}
-                                population={country.population}
-                                flag={country.flag}
-                                region={country.region}
-                                capital={country.capital}
+                                country={country}
                             />
                 })
             }

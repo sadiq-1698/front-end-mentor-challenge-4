@@ -15,7 +15,7 @@ const BackButton = () => {
     }
 
     return (
-        <div className={darkMode ? "back-btn dark" : "back-btn"} onClick={goToMainPage}>
+        <div className={darkMode ? "back-btn dark" : "back-btn"} onClick={ goToMainPage }>
             <i className={darkMode ? "fa fa-arrow-left dark" : "fa fa-arrow-left"} aria-hidden="true"></i>
             <span>Back</span>
         </div>
