@@ -22,11 +22,12 @@ const BottomSection = (props) => {
             <h4>Border Countries:&nbsp;&nbsp;</h4>
             <div className="third-right">
                 {
-                    countryDetails.borders.map((country, index) => {
-                        return  <span key={index} onClick={(e) => onClickBorderCountries(e.target.innerHTML)}>
+                    countryDetails.borders.map((country, index) => (
+                        
+                        <span key={index} onClick={(e) => onClickBorderCountries(country)}>
                                     {country}
                                 </span>
-                    })
+                    ))
                 }     
             </div>
         </div> 

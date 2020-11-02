@@ -6,14 +6,6 @@ import Countries from '../../context/Countries';
 
 const Card = ({country}) => {
 
-    // card styles
-    // const imageStyles = {
-    //     maxWidth : "100%",
-    //     maxHeight : "100%",
-    //     borderTopLeftRadius : "5px",
-    //     borderTopRightRadius : "5px",
-    // }
-
     // use context
     const { darkMode } = useContext(ThemeToggle);
     const { setShowDetailsPage } = useContext(SwitchPage);
